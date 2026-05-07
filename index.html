@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, in([miquelcusso-rgb.github.io](https://miquelcusso-rgb.github.io/)) />
+  <title>Tu Nombre — Portfolio</title>
+  <meta name="description" content="Portfolio profesional de edición, postproducción y proyectos audiovisuales." />
+
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --text: #f4f1ea;
+      --muted: #9d9a92;
+      --line: rgba(244, 241, 234, 0.18);
+      --accent: #f4f1ea;
+      --card: #141414;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 26px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      mix-blend-mode: difference;
+    }
+
+    .logo {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    nav a {
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 36px 60px;
+      position: relative;
+    }
+
+    .hero h1 {
+      max-width: 1200px;
+      font-size: clamp(58px, 13vw, 190px);
+      line-height: 0.88;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      margin-top: 28px;
+      font-size: clamp(18px, 3vw, 38px);
+      color: var(--muted);
+    }
+
+    .hero .aka {
+      position: absolute;
+      right: 36px;
+      bottom: 36px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    section {
+      padding: 110px 36px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      font-size: clamp(42px, 8vw, 120px);
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+      margin-bottom: 46px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .project {
+      min-height: 420px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      transition: transform 0.25s ease, background 0.25s ease;
+      cursor: pointer;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      background: #1d1d1d;
+    }
+
+    .project-number {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .project h3 {
+      font-size: clamp(28px, 4vw, 56px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+    }
+
+    .project p {
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 420px;
+    }
+
+    .bio-block {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 80px;
+      margin-bottom: 90px;
+    }
+
+    .bio-label,
+    .info-label {
+      color: #00ff33;
+      font-size: 22px;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .bio-text {
+      font-size: clamp(28px, 3.8vw, 58px);
+      line-height: 1.18;
+      letter-spacing: -0.04em;
+      max-width: 1200px;
+    }
+
+    .side-info {
+      display: grid;
+      gap: 34px;
+      align-content: start;
+    }
+
+    .side-info p {
+      font-size: clamp(22px, 2vw, 34px);
+      line-height: 1.25;
+      color: var(--text);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .video-card {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--card);
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-card h3 {
+      font-size: clamp(26px, 3vw, 48px);
+      text-transform: uppercase;
+      letter-spacing: -0.05em;
+      line-height: 0.95;
+      margin-bottom: 8px;
+    }
+
+    .video-card p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    form {
+      max-width: 760px;
+      display: grid;
+      gap: 16px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+      color: var(--text);
+      font-size: 20px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 24px;
+      width: fit-content;
+      border: 1px solid var(--text);
+      background: var(--text);
+      color: var(--bg);
+      padding: 16px 24px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: transparent;
+      color: var(--text);
+    }
+
+    footer {
+      padding: 36px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 20px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        padding: 20px;
+      }
+
+      nav {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .hero,
+      section,
+      footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .hero .aka {
+        left: 20px;
+        right: auto;
+      }
+
+      .grid,
+      .bio-block,
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        min-height: 320px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#top">Tu Nombre</a>
+    <nav>
+      <a href="#edit">Edit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Tu Nombre<br />Studio</h1>
+      <p>Editor/a audiovisual & postproductor/a</p>
+      <span class="aka">AKA Tu Marca Personal</span>
+    </section>
+
+    <section id="edit">
+      <h2 class="section-title">Edit</h2>
+
+      <div class="bio-block">
+        <div>
+          <div class="bio-label">Biography</div>
+          <p class="bio-text">
+            Eva’s practice is rooted in rhythm, instinct and precision — shaping image,
+            sound and time into pieces that move between emotion and structure.
+          </p>
+        </div>
+
+        <aside class="side-info">
+          <div>
+            <div class="info-label">Software</div>
+            <p>Adobe Premiere, Adobe After Effects</p>
+          </div>
+
+          <div>
+            <div class="info-label">Areas</div>
+            <p>Music Videos, Shorts, Advertising</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe src="https://player.vimeo.com/video/ID_DEL_VIDEO_1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Project One</h3>
+          <p>Music video · Editing · 2026</p>
+        </article>
+
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe src="https://player.vimeo.com/video/ID_DEL_VIDEO_2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Project Two</h3>
+          <p>Advertising · Editing · 2026</p>
+        </article>
+
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe src="https://player.vimeo.com/video/ID_DEL_VIDEO_3" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Project Three</h3>
+          <p>Short film · Editing · 2026</p>
+        </article>
+
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe src="https://player.vimeo.com/video/ID_DEL_VIDEO_4" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Project Four</h3>
+          <p>Music video · Editing · 2026</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <form action="https://formspree.io/f/TU_ID" method="POST">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Tu Nombre</p>
+    <div class="socials">
+      <a href="https://vimeo.com/" target="_blank" rel="noreferrer">Vimeo</a>
+      <a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
