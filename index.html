@@ -103,6 +103,40 @@
       border-top: 1px solid var(--line);
     }
 
+    #contact {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: var(--bg);
+      padding: 110px 36px 36px;
+      border-top: 0;
+      overflow-y: auto;
+    }
+
+    #contact:target {
+      display: block;
+    }
+
+    .contact-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .close-contact {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .close-contact:hover {
+      color: var(--text);
+    }
+
     .section-title {
       font-size: clamp(24px, 3vw, 38px);
       letter-spacing: -0.06em;
@@ -321,6 +355,10 @@
       .bio-block,
       .video-grid {
         grid-template-columns: 1fr;
+      }
+
+      #contact {
+        padding: 90px 20px 28px;
       }
 
       .project {
@@ -554,7 +592,10 @@
     </section>
 
     <section id="contact">
-      <h2 class="section-title">Contact</h2>
+      <div class="contact-header">
+        <h2 class="section-title">Contact</h2>
+        <a class="close-contact" href="#top">Close</a>
+      </div>
       <form action="https://formspree.io/f/TU_ID" method="POST">
         <input type="text" name="name" placeholder="Name" required />
         <input type="email" name="email" placeholder="Email" required />
