@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tu Nombre — Portfolio</title>
+  <title>Eva Almenar - Video Editor</title>
   <meta name="description" content="Portfolio profesional de edición, postproducción y proyectos audiovisuales." />
 
   <style>
@@ -80,7 +80,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 120px 36px 28px;
+      padding: 120px 36px 34px;
       position: relative;
     }
 
@@ -186,7 +186,7 @@
     }
 
     .edit-section {
-      padding-top: 0;
+      padding-top: 28px;
     }
 
     .bio-block {
@@ -645,5 +645,22 @@
     </div>
   </footer>
   <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+    document.querySelectorAll('.video-card').forEach((card) => {
+      const iframe = card.querySelector('iframe');
+      if (!iframe || !window.Vimeo) return;
+
+      const player = new Vimeo.Player(iframe);
+
+      card.addEventListener('mouseenter', () => {
+        player.setVolume(0).catch(() => {});
+        player.play().catch(() => {});
+      });
+
+      card.addEventListener('mouseleave', () => {
+        player.pause().catch(() => {});
+      });
+    });
+  </script>
 </body>
 </html>
