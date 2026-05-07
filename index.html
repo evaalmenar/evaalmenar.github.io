@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, in([miquelcusso-rgb.github.io](https://miquelcusso-rgb.github.io/)) />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tu Nombre — Portfolio</title>
   <meta name="description" content="Portfolio profesional de edición, postproducción y proyectos audiovisuales." />
 
@@ -40,7 +40,7 @@
     }
 
     header {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
@@ -372,6 +372,19 @@
         grid-template-columns: 1fr;
       }
 
+      .edit-section {
+        padding-top: 28px;
+      }
+
+      .bio-block {
+        gap: 34px;
+        margin-bottom: 46px;
+      }
+
+      .side-info {
+        margin-top: 4px;
+      }
+
       #contact {
         padding: 90px 20px 28px;
       }
@@ -406,7 +419,7 @@
     <section id="edit" class="edit-section">
       <div class="bio-block">
         <div>
-          <div class="bio-label">About me</div>
+          <div class="bio-label">Biography</div>
           <p class="bio-text">
             I'm Eva Almenar, a video editor based in Madrid. I've worked on music videos,
             social media content, ads and visualizers. I focus on clean, engaging edits that
@@ -434,15 +447,15 @@
           <div class="video-frame landscape">
             <iframe src="https://player.vimeo.com/video/1166151455?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="Nano y Chocho"></iframe>
           </div>
-          <h3>NANO Y CHOCHO | Short Film</h3>
-          <p>Video editing</p>
+          <h3>NANO Y CHOCHO</h3>
+          <p>Short film · editing</p>
         </article>
 
         <article class="video-card">
           <div class="video-frame portrait">
             <iframe src="https://player.vimeo.com/video/1190074858?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="Desigual x Zara Larsson - Whats In My Bag"></iframe>
           </div>
-          <h3>DESIGUAL x ZARA LARSSON - WHAT’S IN MY BAG</h3>
+          <h3>DESIGUAL X ZARA LARSSON - WHAT’S IN MY BAG</h3>
           <p>Final edit and adaptations</p>
         </article>
 
@@ -458,7 +471,7 @@
           <div class="video-frame portrait">
             <iframe src="https://player.vimeo.com/video/1190075893?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="H&M Women New Season"></iframe>
           </div>
-          <h3>H&M - WOMEN NEW SEASON</h3>
+          <h3>H&M WOMEN NEW SEASON</h3>
           <p>Adaptations and final exports</p>
         </article>
 
@@ -490,7 +503,7 @@
           <div class="video-frame landscape">
             <iframe src="https://player.vimeo.com/video/1190075889?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="Tanline Promo"></iframe>
           </div>
-          <h3>TANLINE CLOTHES</h3>
+          <h3>TANLINE PROMO</h3>
           <p>Audio and video editing</p>
         </article>
 
@@ -499,7 +512,7 @@
             <iframe src="https://player.vimeo.com/video/1097483333?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="Alexander Wang - Pike"></iframe>
           </div>
           <h3>ALEXANDER WANG - PIKE</h3>
-          <p>Final edit and exports</p>
+          <p>final edit and exports</p>
         </article>
 
         <article class="video-card">
@@ -507,7 +520,7 @@
             <iframe src="https://player.vimeo.com/video/1097483350?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="Alexander Wang - Ballet Flat"></iframe>
           </div>
           <h3>ALEXANDER WANG - BALLET FLAT</h3>
-          <p>Final edit and exports</p>
+          <p>final edit and exports</p>
         </article>
 
         <article class="video-card">
@@ -530,7 +543,7 @@
           <div class="video-frame portrait">
             <iframe src="https://player.vimeo.com/video/1131613293?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="Edge Restaurant - Moments 2"></iframe>
           </div>
-          <h3>EDGE RESTAURANT - MOMENTS</h3>
+          <h3>EDGE RESTAURANT - MOMENTS 2</h3>
           <p>Audio and video editing</p>
         </article>
 
@@ -538,7 +551,7 @@
           <div class="video-frame portrait">
             <iframe src="https://player.vimeo.com/video/1131613354?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="Edge Restaurant - Moments 1"></iframe>
           </div>
-          <h3>EDGE RESTAURANT - MOMENTS</h3>
+          <h3>EDGE RESTAURANT - MOMENTS 1</h3>
           <p>Audio and video editing</p>
         </article>
 
@@ -563,14 +576,14 @@
             <iframe src="https://player.vimeo.com/video/1097485174?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="La Zaramora - Marina Lara"></iframe>
           </div>
           <h3>LA ZARAMORA - MARINA LARA</h3>
-          <p>Video editing</p>
+          <p>Editing</p>
         </article>
 
         <article class="video-card">
           <div class="video-frame landscape">
             <iframe src="https://player.vimeo.com/video/1097485084?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="Short Documentary"></iframe>
           </div>
-          <h3>SHORT DOCUMENTARY - MARINA LARA</h3>
+          <h3>SHORT DOCUMENTARY</h3>
           <p>Audio and video editing</p>
         </article>
 
@@ -623,7 +636,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Tu Nombre</p>
+    <p>© 2026 Eva Almenar</p>
     <div class="socials">
       <a href="https://vimeo.com/evaalmenar" target="_blank" rel="noreferrer">Vimeo</a>
       <a href="https://instagram.com/almenar.mov" target="_blank" rel="noreferrer">@almenar.mov</a>
