@@ -76,17 +76,17 @@
     }
 
     .hero {
-      min-height: 82vh;
+      min-height: auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 110px 36px 50px;
+      justify-content: flex-end;
+      padding: 120px 36px 28px;
       position: relative;
     }
 
     .hero h1 {
       max-width: 1200px;
-      font-size: clamp(38px, 7vw, 88px);
+      font-size: clamp(34px, 5.8vw, 68px);
       line-height: 0.95;
       letter-spacing: -0.055em;
       text-transform: uppercase;
@@ -99,12 +99,12 @@
     }
 
         section {
-      padding: 64px 36px;
+      padding: 48px 36px;
       border-top: 1px solid var(--line);
     }
 
     .section-title {
-      font-size: clamp(28px, 4vw, 52px);
+      font-size: clamp(24px, 3vw, 38px);
       letter-spacing: -0.06em;
       text-transform: uppercase;
       margin-bottom: 34px;
@@ -151,11 +151,15 @@
       max-width: 420px;
     }
 
+    .edit-section {
+      padding-top: 0;
+    }
+
     .bio-block {
       display: grid;
       grid-template-columns: 1.6fr 1fr;
-      gap: 48px;
-      margin-bottom: 56px;
+      gap: 42px;
+      margin-bottom: 54px;
       align-items: start;
     }
 
@@ -170,7 +174,7 @@
     }
 
     .bio-text {
-      font-size: clamp(17px, 1.6vw, 23px);
+      font-size: clamp(15px, 1.25vw, 18px);
       line-height: 1.45;
       letter-spacing: -0.01em;
       max-width: 720px;
@@ -183,14 +187,18 @@
     }
 
     .side-info p {
-      font-size: clamp(16px, 1.4vw, 20px);
+      font-size: clamp(14px, 1.15vw, 17px);
       line-height: 1.45;
       color: var(--text);
     }
 
+    .edits-title {
+      margin-bottom: 24px;
+    }
+
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
@@ -217,7 +225,7 @@
     }
 
     .video-card h3 {
-      font-size: clamp(22px, 2.2vw, 34px);
+      font-size: clamp(17px, 1.7vw, 24px);
       text-transform: uppercase;
       letter-spacing: -0.05em;
       line-height: 0.95;
@@ -226,7 +234,7 @@
 
     .video-card p {
       color: var(--muted);
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.45;
     }
 
@@ -332,18 +340,16 @@
     <nav>
       <a href="#edit">Edit</a>
       <a href="#contact">Contact</a>
+      <a href="https://instagram.com/almenar.mov" target="_blank" rel="noreferrer">Instagram</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
       <h1>EVA ALMENAR</h1>
-      <p>Video editor for ads, shorts and music videos.</p>
     </section>
 
-    <section id="edit">
-      <h2 class="section-title">Edit</h2>
-
+    <section id="edit" class="edit-section">
       <div class="bio-block">
         <div>
           <div class="bio-label">Biography</div>
@@ -366,10 +372,12 @@
         </aside>
       </div>
 
+      <h2 class="section-title edits-title">EDITS</h2>
+
       <div class="video-grid">
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1166151455" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>NANO Y CHOCHO</h3>
           <p>short film · editing</p>
@@ -377,7 +385,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1190074858" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>DESIGUAL X ZARA LARSON - WHAT’S IN MY BAG</h3>
           <p>final edit and adaptations</p>
@@ -385,7 +393,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1190074857" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>KFC - KEBAB</h3>
           <p>rotoscoping, adaptations and final exports</p>
@@ -393,7 +401,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1190075893" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>H&M WOMEN NEW SEASON</h3>
           <p>adaptations and final exports</p>
@@ -401,7 +409,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1190075888" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>H&M - MEN NEW SEASON</h3>
           <p>adaptations and final exports</p>
@@ -409,7 +417,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097483217" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>SAMSUNG AI - FRIDGE</h3>
           <p>conforming, adaptations and final exports</p>
@@ -417,7 +425,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097483246" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>SAMSUNG AI - WASHER</h3>
           <p>conforming, adaptations and final exports</p>
@@ -425,7 +433,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1190075889" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>TANLINE PROMO</h3>
           <p>audio and video editing</p>
@@ -433,7 +441,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097483333" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>ALEXANDER WANG - BALLET FLAT</h3>
           <p>final edit and exports</p>
@@ -441,7 +449,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097483350" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>ALEXANDER WANG - BALLET FLAT</h3>
           <p>final edit and exports</p>
@@ -449,7 +457,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1190075430" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>LOEWE - SPEAKER</h3>
           <p>adaptations and final exports</p>
@@ -457,7 +465,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1190075429" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>LOEWE - RUBE GOLDBERG</h3>
           <p>adaptations and final exports</p>
@@ -465,7 +473,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1131613293" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>EDGE RESTAURANT - MOMENTOS 2</h3>
           <p>audio and video editing</p>
@@ -473,7 +481,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1131613354" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>EDGE RESTAURANT - MOMENTOS 1</h3>
           <p>audio and video editing</p>
@@ -481,7 +489,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1131613219" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>EDGE RESTAURANT - COCKTAILS</h3>
           <p>audio and video editing</p>
@@ -489,7 +497,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1131613251" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>EDGE RESTAURANT - DETALLES GASTRO</h3>
           <p>audio and video editing</p>
@@ -497,7 +505,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097485174" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>LA ZARAMORA - MARINA LARA</h3>
           <p>editing</p>
@@ -505,7 +513,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097485084" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>SHORT DOCUMENTARY</h3>
           <p>audio and video editing</p>
@@ -513,7 +521,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097483320" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>MAK SCHOOL - A DAY IN</h3>
           <p>audio and video editing</p>
@@ -521,7 +529,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097483303" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>MAK SCHOOL - GENERIC</h3>
           <p>audio and video editing</p>
@@ -529,7 +537,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097483255" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>MAK SCHOOL - INTERVIEW</h3>
           <p>audio and video editing</p>
@@ -537,7 +545,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <iframe src="https://player.vimeo.com/video/1097483281" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/$1?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <h3>MAK SCHOOL - EDITORIALS</h3>
           <p>audio and video editing</p>
@@ -559,9 +567,9 @@
   <footer>
     <p>© 2026 Tu Nombre</p>
     <div class="socials">
-      <a href="https://vimeo.com/" target="_blank" rel="noreferrer">Vimeo</a>
-      <a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-      <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://vimeo.com/evaalmenar" target="_blank" rel="noreferrer">Vimeo</a>
+      <a href="https://instagram.com/almenar.mov" target="_blank" rel="noreferrer">@almenar.mov</a>
+      
     </div>
   </footer>
 </body>
